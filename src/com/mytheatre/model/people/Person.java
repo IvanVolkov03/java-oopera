@@ -11,6 +11,44 @@ public class Person {
         this.gender = gender;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
+
+
+    public enum Gender{
+        MALE,
+        FEMALE
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -24,31 +62,5 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, gender);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
-                '}';
-    }
-
-    public enum Gender{
-        MALE,
-        FEMALE
     }
 }

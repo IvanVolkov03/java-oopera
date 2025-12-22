@@ -22,4 +22,20 @@ public class Opera extends MusicalShow{
                 musicalShow.getLibrettoText());
         this.choirSize = choirSize;
     }
+
+    public int getChoirSize() {
+        return choirSize;
+    }
+
+    public void setChoirSize(int choirSize) {
+        this.choirSize = choirSize;
+    }
+
+    //Не используется
+    @Override
+    public String toString() {
+        return "Opera{" +
+                "choirSize=" + choirSize +
+                '}';
+    }
 }

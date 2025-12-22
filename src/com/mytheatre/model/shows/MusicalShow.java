@@ -15,10 +15,6 @@ public class MusicalShow extends Show {
         this.librettoText = librettoText;
     }
 
-    public void printLibretto(){
-        System.out.println("Текст либретто: " + librettoText);
-    }
-
     public Person getMusicAuthor() {
         return musicAuthor;
     }
@@ -27,4 +23,24 @@ public class MusicalShow extends Show {
         return librettoText;
     }
 
+    public void setMusicAuthor(Person musicAuthor) {
+        this.musicAuthor = musicAuthor;
+    }
+
+    public void setLibrettoText(String librettoText) {
+        this.librettoText = librettoText;
+    }
+
+    public void printLibretto(){
+        System.out.println("Текст либретто: " + librettoText);
+    }
+
+    //Не используется
+    @Override
+    public String toString() {
+        return "MusicalShow{" +
+                "musicAuthor=" + musicAuthor +
+                ", librettoText='" + librettoText + '\'' +
+                '}';
+    }
 }

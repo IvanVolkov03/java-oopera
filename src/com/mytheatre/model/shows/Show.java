@@ -4,14 +4,45 @@ import java.util.Objects;
 public class Show {
     private String title;
     private int duration;
-    private  Director director;
+    private Director director;
     private ArrayList<Actor> listOfActors;
-
 
     public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
         this.duration = duration;
         this.director = director;
+        this.listOfActors = listOfActors;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public ArrayList<Actor> getListOfActors() {
+        return listOfActors;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
+    }
+
+    public void setListOfActors(ArrayList<Actor> listOfActors) {
         this.listOfActors = listOfActors;
     }
 
@@ -22,12 +53,10 @@ public class Show {
     }
 
     public void addActor(Actor newActor){
-        for(Actor actor : listOfActors){
-            if(newActor.equals(actor)){
-                System.out.println("Данный актёр уже есть в спектакле!");
-                return;
+        if(isContainsActor(newActor)){
+            System.out.println("Данный актёр уже есть в спектакле!");
+            return;
             }
-        }
         listOfActors.add(newActor);
     }
 
@@ -48,7 +77,7 @@ public class Show {
         }
 
         // 4. Проверяем, не играет ли уже новый актер в этом спектакле
-        if (listOfActors.contains(newActor)) {
+        if (isContainsActor(newActor)) {
             System.out.println("Ошибка: Актёр " + newActor.getSurname() + " уже участвует в этом спектакле.");
             return false;
         }
@@ -59,21 +88,18 @@ public class Show {
         return true;
     }
 
-    public String getTitle() {
-        return title;
+    public boolean isContainsActor(Actor actor){
+        return listOfActors.contains(actor);
     }
 
-    public int getDuration() {
-        return duration;
+    //Не используется
+    @Override
+    public String toString() {
+        return "Show{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                ", director=" + director +
+                ", listOfActors=" + listOfActors +
+                '}';
     }
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public ArrayList<Actor> getListOfActors() {
-        return listOfActors;
-    }
-
-
 }
