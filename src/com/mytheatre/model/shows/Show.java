@@ -1,5 +1,8 @@
+package com.mytheatre.model.shows;
+
+import com.mytheatre.model.people.Actor;
+import com.mytheatre.model.people.Director;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Show {
     private String title;
@@ -95,7 +98,7 @@ public class Show {
     //Не используется
     @Override
     public String toString() {
-        return "Show{" +
+        return "com.mytheatre.model.shows.Show{" +
                 "title='" + title + '\'' +
                 ", duration=" + duration +
                 ", director=" + director +

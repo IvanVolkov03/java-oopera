@@ -1,3 +1,7 @@
+package com.mytheatre.model.people;
+
+import com.mytheatre.model.enums.Gender;
+
 public class Director extends Person{
     private int numberOfShows;
 
@@ -21,7 +25,7 @@ public class Director extends Person{
 
     @Override
     public String toString() {
-        return "Director{" + super.toString() +
+        return "com.mytheatre.model.people.Director{" + super.toString() +
                 ", numberOfShows=" + numberOfShows +
                 '}';
     }

@@ -1,3 +1,6 @@
+package com.mytheatre.model.people;
+
+import com.mytheatre.model.enums.Gender;
 import java.util.Objects;
 
 public class Person {
@@ -37,7 +40,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "com.mytheatre.model.people.Person{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +
@@ -45,10 +48,7 @@ public class Person {
     }
 
 
-    public enum Gender{
-        MALE,
-        FEMALE
-    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

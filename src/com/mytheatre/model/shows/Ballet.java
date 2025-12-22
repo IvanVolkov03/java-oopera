@@ -1,3 +1,9 @@
+package com.mytheatre.model.shows;
+
+import com.mytheatre.model.people.Actor;
+import com.mytheatre.model.people.Director;
+import com.mytheatre.model.people.Person;
+
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow{
@@ -35,7 +41,7 @@ public class Ballet extends MusicalShow{
     //Не используется
     @Override
     public String toString() {
-        return "Ballet{" +
+        return "com.mytheatre.model.shows.Ballet{" +
                 "choreographer=" + choreographer +
                 '}';
     }

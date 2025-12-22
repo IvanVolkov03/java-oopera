@@ -1,6 +1,9 @@
-import java.util.Objects;
+package com.mytheatre.model.people;
 
-public class Actor extends Person{
+import java.util.Objects;
+import com.mytheatre.model.enums.Gender;
+
+public class Actor extends Person {
     private int height;
 
     public Actor(String name, String surname, Gender gender, int height) {
@@ -15,14 +18,14 @@ public class Actor extends Person{
 
     @Override
     public String toString() {
-        return "Actor{" + super.toString() +
+        return "com.mytheatre.model.people.Actor{" + super.toString() +
                 ", height=" + height +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (!super.equals(o)) return false; // Проверяем имя, фамилию, пол через Person
+        if (!super.equals(o)) return false; // Проверяем имя, фамилию, пол через com.mytheatre.model.people.Person
         Actor actor = (Actor) o;
         return height == actor.height;
     }

@@ -1,3 +1,9 @@
+package com.mytheatre.model.shows;
+
+import com.mytheatre.model.people.Actor;
+import com.mytheatre.model.people.Director;
+import com.mytheatre.model.people.Person;
+
 import java.util.ArrayList;
 
 public class Opera extends MusicalShow{
@@ -34,7 +40,7 @@ public class Opera extends MusicalShow{
     //Не используется
     @Override
     public String toString() {
-        return "Opera{" +
+        return "com.mytheatre.model.shows.Opera{" +
                 "choirSize=" + choirSize +
                 '}';
     }
